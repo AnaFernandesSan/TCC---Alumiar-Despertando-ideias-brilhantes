@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*------------SOM---------------------*/
+button {
+    background-color: transparent !important; /* Forçar um fundo transparente */
+    color: white;
+}
+
+.icon-button i {
+    font-size: 100px; /* Altere o tamanho conforme necessário */
+}
+
+.mensagem p {
+    font-size: 80px;
+}
+
+.speakButton {
+    background-color: transparent; /* Remove o fundo do botão */
+    border: none; /* Remove o contorno do botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar sobre o botão */
+    padding: 10px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    display: inline-flex; /* Alinha o ícone no centro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+
+/*MENU --------------------------------------------------------------------------------------------------------- */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../imagens/idoso_tecnologia.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+nav img {
+    width: 170px;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    list-style: none;
+    margin-left: 20px; /* Espaço entre os itens */
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #d6af10;
+    display: block;
+    margin: auto;
+    transition: 0.6s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    border-radius: 30px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #d6af10;
+    background: #d6af10;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* FIMMMMMMMM MENU --------------------------------------------------------------------------------------------------------------- */
+
+/* Bloco do chorão----------------------------------------------------------------------------------------------------------------------- */
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../imagens/aposentados.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+p {
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 0;
+    font-style: italic;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------- */
+
+/*MEDIA QUERY -------------------------------------------------------------------------------------------------------------------*/
+
+
+@media (max-width: 700px) {
+    /* PARA O MENU */
+    .text-box h1 {
+        font-size: 30px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed; /* Ajustado para 'fixed' para o menu ficar fixo no lado direito */
+        top: 0;
+        right: -2000px; /* Inicialmente fora da tela */
+        width: 200px;
+        height: 100vh;
+        background: #d6af10;
+        z-index: 2;
+        transition: right 0.5s ease; /* A transição agora vai mover o menu da direita para a esquerda */
+        text-align: left;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+
+    /* Para o botão de abrir o menu */
+    .nav-links.open {
+        right: 0; /* Quando ativado, o menu aparece */
+    }
+
+    /* Estilo para o botão de abrir o menu (ícone hambúrguer) */
+    .hamburger-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .cta h1 {
+        font-size: 24px;
+    }
+}
+
+.speakButton i {
+    font-size: 30px; /* Aumenta o tamanho do ícone */
+    color: white; /* Garante que o ícone permaneça visível */
+}
+
+
+#speakButton:hover {
+    background-color: #f0f0f0; /* Cor de fundo quando o botão é passado o mouse sobre ele */
+}
+

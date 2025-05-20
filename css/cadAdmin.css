@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%; /* Garante que o body ocupe 100% da altura da tela */
+    background-color: #e4e4e4; /* Cor suave para o fundo */
+    display: flex;
+    flex-direction: column;   /* Coloca o conteúdo na vertical */
+    justify-content: flex-start; /* Garante que o conteúdo comece no topo */
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o restante do espaço da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: auto; /* Largura adequada para um formulário */
+    padding: 30px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Itens alinhados na coluna */
+    justify-content: center;
+    align-items: center;
+    min-height: 450px; /* Garante uma altura mínima para o formulário */
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    width: 100%; /* Garante que o form ocupe toda a largura da container */
+}
+
+label {
+    display: block; /* Faz com que o label ocupe a largura total e fique acima do input */
+    margin-bottom: 10px; /* Espaçamento entre label e input */
+    text-align: left; /* Alinha o texto do label à esquerda */
+    width: 100%;
+}
+
+.container input {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Espaçamento entre os inputs */
+    padding: 10px 12px; /* Menos padding para deixar o input menor */
+    font-size: 14px; /* Fonte um pouco menor */
+    width: 100%; /* Faz os inputs ocuparem 100% da largura da container */
+    outline: none;
+}
+
+.container input:focus {
+    border-color: #66afe9;
+}
+
+.container button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    width: 100%; /* Faz o botão ocupar 100% da largura da container */
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.footer_copyright {
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;  /* A container ocupa mais largura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;  /* Ajusta ainda mais para telas muito pequenas */
+    }
+}

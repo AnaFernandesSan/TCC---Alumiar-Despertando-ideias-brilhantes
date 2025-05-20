@@ -1,0 +1,50 @@
+
+
+.speakButton .fas.fa-volume-up {
+    font-size: 30px;
+}
+
+.speakButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #FFD700;
+    margin-left: 15px;
+}
+
+.speakButton:hover {
+    background-color: #f0f0f0;
+}
+
+.section {
+    text-align: justify;
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+}
+
+.section h2 {
+    margin-bottom: 10px; /* Espaçamento entre o título e o texto */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.section p {
+    font-size: 1em;
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #555;
+}
+
+.container {
+    max-width: 800px; /* Largura máxima para melhor legibilidade */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px;
+}
+
+button.speakButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

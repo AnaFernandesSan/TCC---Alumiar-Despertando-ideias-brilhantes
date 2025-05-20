@@ -1,0 +1,194 @@
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #0d77bd;
+    z-index: 1000;
+    
+}
+
+.navbarf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #0d77bd;
+    width: 100%;
+    height: 100px;
+}
+/* Estilos gerais do body */
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 30px !important;
+    margin: 0; /* Garantir que não haja margin no body */
+    padding-top: 0; /* Remover qualquer espaçamento superior */
+}
+
+/* Estilos do header */
+header {
+    height: 60px; /* Ajuste a altura do header conforme necessário */
+    background-color: transparent; /* Deixe o fundo do header transparente */
+    color: #000; /* Cor do texto do header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Para garantir que o header fique sobre outros elementos */
+    padding: 10px 20px; /* Padding para ajustar o tamanho do header */
+    box-shadow: none; 
+}
+
+.normal:hover{
+    color: white;
+}
+
+/* Evitar qualquer efeito de hover no header */
+header:hover {
+    background-color: transparent; /* Garantir que o header não mude de cor ao passar o mouse */
+}
+
+/* Restante do seu CSS permanece inalterado */
+
+
+.navbarf .logo {
+    width: 170px;
+}
+.normal:hover{
+    
+    color: #FFD700;
+}
+
+.lista {
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.normal {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.normal ion-icon {
+    margin-right: 5px;
+}
+
+.navbarf-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbarf-links ul {
+    display: flex;
+    padding: 0;
+}
+
+.lista::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.6s;
+}
+
+
+.speakButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #FFD700;
+    margin-left: 15px;
+}
+
+.speakButton:hover {
+    background-color: #f0f0f0;
+}
+
+.navbarf-links-mobile {
+    display: none;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: fixed;
+    right: -200px;
+    top: 0;
+    height: 100%;
+    background-color: #007BFF;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+}
+
+.navbarf-links-mobile ul {
+    list-style: none;
+}
+
+.navbarf-links-mobile ul li {
+    margin: 20px 0;
+}
+
+.navbarf-links-mobile ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon,
+.fa-times {
+    display: none;
+    cursor: pointer;
+}
+
+.navbarfbar .fa-times {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbarf-links {
+        display: none;
+    }
+
+    .navbarf-links-mobile {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbarf-links-mobile ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbarfbar {
+        padding: 10px;
+    }
+
+    .navbarf-links-mobile {
+        width: 150px;
+    }
+
+    .navbarf-links-mobile ul li a {
+        font-size: 16px;
+    }
+}

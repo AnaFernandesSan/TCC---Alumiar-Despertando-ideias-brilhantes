@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px !important;
+}
+
+
+
+.navbarf-links.open {
+    display: flex;
+}
+
+
+.navbarf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #0d77bd !important;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    position: fixed;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarf .logo {
+    width: 170px;
+}
+
+/* Alinhamento das listas horizontalmente */
+.navbarf-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste do estilo das listas */
+.navbarf-links .lista {
+    position: relative;
+    margin: 0 15px;
+    list-style: none; /* Remove a bolinha da lista */
+}
+
+.normal {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.normal:hover {
+    color: #FFD013 !important ;
+}
+
+.normal ion-icon {
+    margin-right: 5px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative; /* Permite que o dropdown-menu seja posicionado em relação ao item pai */
+}
+
+.dropdown-menu {
+    display: none; /* Esconde o menu por padrão */
+    position: absolute;
+    top: 100%; /* Faz o menu descer para ficar abaixo do botão */
+    left: 0; /* Alinha o dropdown ao lado esquerdo */
+    background-color: #fff;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1010;
+    margin-top: 10px; /* Dá um espaçamento entre o botão e o menu */
+    opacity: 0; /* Transição suave para o menu */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    visibility: hidden; /* Torna o dropdown invisível antes de hover */
+}
+
+/* Exibe o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1; /* Exibe o menu com opacidade */
+    visibility: visible; /* Torna o menu visível */
+}
+
+/* Links dentro dos dropdowns */
+.dropdown-menu li {
+    list-style: none; /* Remove a bolinha da lista no dropdown */
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #333 !important;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+    color: #0d77bd;
+}
+
+/* Estilo do botão de menu em dispositivos móveis */
+#menu-icon,
+.fa-times {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .navbarf-links {
+        display: none;
+    }
+
+    .navbarf-links-mobile {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbarf-links-mobile ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarf-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbarf-links.open {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .navbarf-links-mobile {
+        display: block;
+    }
+}

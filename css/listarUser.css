@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite rolagem horizontal apenas se necessário */
+    margin-bottom: 20px;
+}
+
+/* Tabela com 100% de largura */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Distribui as colunas uniformemente */
+}
+
+/* Definir largura para as colunas */
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap; /* Impede a quebra de texto nas células */
+}
+
+/* Cabeçalho da tabela */
+thead th {
+    background-color: #007bff;
+    color: black;
+    font-size: 16px;
+}
+
+/* Ajuste o tamanho mínimo de cada coluna, caso precise de mais espaço */
+table th:nth-child(1), table td:nth-child(1) { width: 5%; }  /* Coluna ID */
+table th:nth-child(2), table td:nth-child(2) { width: 15%; } /* Coluna Nome */
+table th:nth-child(3), table td:nth-child(3) { width: 15%; } /* Coluna Sobrenome */
+table th:nth-child(4), table td:nth-child(4) { width: 20%; } /* Coluna E-mail */
+table th:nth-child(5), table td:nth-child(5) { width: 15%; } /* Coluna Senha */
+table th:nth-child(6), table td:nth-child(6) { width: 15%; } /* Coluna Data Nasc */
+table th:nth-child(7), table td:nth-child(7) { width: 5%; } /* Coluna Tipo */
+
+/* Limitar o tamanho do conteúdo do e-mail e senha */
+table td:nth-child(4) {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Exibe '...' caso o texto seja muito longo */
+}
+
+table td:nth-child(5) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    table tbody td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table tbody td::before {
+        content: attr(data-label); /* Adiciona rótulo antes dos dados */
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+    }
+
+    table thead {
+        display: none; /* Esconde o cabeçalho em telas pequenas */
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+    }
+}

@@ -1,0 +1,164 @@
+
+* {   
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#speakButton {
+    background-color: transparent; /* Remove o fundo do botão */
+    border: none; /* Remove o contorno do botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar sobre o botão */
+    padding: 10px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    display: inline-flex; /* Alinha o ícone no centro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.speakButton i {
+    font-size: 30px; /* Aumenta o tamanho do ícone */
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column; /* Flexbox para organizar a página */
+}
+
+/* Conteúdo principal ocupa o espaço restante */
+.main-content {
+    flex: 1;
+    padding-bottom: 40px; /* Ajuste o padding, se necessário */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d77bd;
+    color: white;
+    width: 100%;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Garante que o footer vá para o final */
+    position: relative;
+    z-index: 10;
+}
+
+#footer_content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+#footer_content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#footer_social_media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer_link {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.footer_link ion-icon {
+    margin-right: 8px;
+}
+
+.footer_link:hover {
+    color: #d6af10;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.footer-link{
+    color: #000 !important;
+    text-decoration: none !important;
+}
+.list {
+    list-style: none !important;
+    font-size: 20px;
+    position: relative; /* Adiciona posição relativa para o elemento pai */
+}
+
+.list::after {
+    content: '';
+    width: 100%; /* Alterado para 100% para ocupar toda a largura do pai */
+    height: 2px;
+
+    display: block;
+    margin: auto;
+    transition: width 0.6s; /* Mantém a transição suave se necessário */
+}
+
+
+.footer-list h3 {
+    border-bottom: 2px solid #d6af10;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-list li {
+    margin: 5px 0;
+}
+
+.footer_copyright {
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.copy {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #footer_social_media {
+        justify-content: center;
+    }
+    .footer-list {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    #footer_social_media .footer-link {
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer_content {
+        grid-template-columns: 1fr;
+    }
+    #footer_social_media .footer-link {
+        height: 1.5rem;
+        width: 1.5rem;
+        font-size: 0.75rem;
+    }
+}
+

@@ -1,0 +1,135 @@
+body{
+    background-color: #f9f9f9;
+}
+
+.content {
+    margin-left: 250px; /* Largura da barra lateral */
+    padding: 20px;
+    position: relative; /* Garante que o conteúdo esteja no fluxo normal do layout */
+}
+
+/* Estilos para a imagem de perfil */
+#image-upload-button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#fileInput {
+    display: none;
+}
+
+#imageWrapper {
+    width: 200px; /* Defina o tamanho desejado */
+    height: 200px; /* Defina o tamanho desejado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Tornar a imagem redonda */
+    overflow: hidden;
+    position: relative;
+    background-color: #b2d3d4;
+}
+
+#selectedImage {
+    max-width: 140%;
+    max-height: 140%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fa-camera {
+    font-size: 48px; /* Tamanho do ícone de câmera */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralizar o ícone de câmera */
+    color: #FFF; /* Cor do ícone */
+}
+
+.logout-btn {
+    background-color: #FFD700; /* Amarelo ouro */
+    color: #ffffff; /* Texto preto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #FFC107; /* Amarelo mais claro no hover */
+  }
+  /* styles.css */
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+.btn-salvar {
+    background-color: #31d2f2; 
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-salvar:hover {
+    background-color:  #29b9e1 /* Amarelo mais claro no hover */
+  }
+  #speakButton {
+    background-color: transparent; /* Remove o fundo do botão */
+    border: none; /* Remove o contorno do botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar sobre o botão */
+    padding: 10px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    display: inline-flex; /* Alinha o ícone no centro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+#speakButton:hover {
+    background-color: #f0f0f0; /* Cor de fundo quando o botão é passado o mouse sobre ele */
+}
+
+.fas.fa-microphone {
+    font-size: 30px;
+}
+#speakButton{
+    background-color: transparent; /* Remove o fundo do botão */
+    border: none; /* Remove o contorno do botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar sobre o botão */
+    padding: 10px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 50%; /* Faz o botão ficar redondo */
+    display: inline-flex; /* Alinha o ícone no centro do botão */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+#speakButton:hover {
+    background-color: #f0f0f0; /* Cor de fundo quando o botão é passado o mouse sobre ele */
+}
+
+.fas.fa-microphone {
+    font-size: 30px;
+}

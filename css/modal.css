@@ -1,0 +1,75 @@
+.modals {
+    display: none; /* Ocultar por padrão */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 30px; /* Aumentando o padding para mais espaçamento interno */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Aumentando a sombra para mais destaque */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 500px; /* Aumentando a largura para o modal ficar maior */
+    max-width: 90%; /* Responsividade para telas pequenas */
+    max-height: 90%; /* Garantir que o modal não ultrapasse 90% da altura da tela */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: auto; /* Permite rolagem interna se o conteúdo for maior */
+}
+
+.modals.show {
+    display: block; /* Mostrar quando ativo */
+    opacity: 1;
+    z-index: 1050; /* Assegurar que o modal ativo esteja no topo */
+}
+
+.modals-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumentando o espaçamento entre os elementos */
+    overflow-y: auto; /* Permite rolagem no conteúdo se for muito grande */
+}
+
+.modals-content p {
+    font-size: 16px;
+    margin-bottom: 20px; /* Aumentando a margem inferior do parágrafo */
+}
+
+.modals-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.modals-content div label {
+    font-weight: bold;
+    margin-bottom: 8px; /* Aumentando o espaçamento entre o label e o input */
+}
+
+.modals-content div input[type="text"],
+.modals-content div input[type="file"] {
+    padding: 10px; /* Aumentando o padding dos inputs */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modals-content div input[type="file"] {
+    padding: 8px; /* Ajustando o padding do input file */
+}
+
+.modals-content .btn + .btn {
+    margin-left: 15px; /* Aumentando o espaçamento entre os botões */
+}
+
+.btn {
+    margin: 10px;
+}
+
+#modal-excluir-aula .modals-content {
+    flex-direction: column;
+}
+
+#modal-excluir-aula .modals-content div {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 15px; /* Aumentando o espaçamento entre os botões */
+}

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+    all: unset; 
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    position: fixed !important; 
+    top: 120px !important; 
+    left: 20px !important; 
+    z-index: 9999; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button a {
+    color: white !important; 
+    text-decoration: none !important; 
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    text-align: center; 
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+
+
+.quiz-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centraliza conteúdo textual */
+    padding: 20px;
+}
+
+.imagem-pergunta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ajuste para ocupar toda a largura disponível */
+    height: auto; /* Remove a limitação fixa da altura */
+    margin-bottom: 20px;
+}
+
+.imagem-pergunta img {
+    max-width: 80%;
+    max-height: 200px; /* Garante que a imagem fique proporcional */
+    display: block;
+}
+
+
+
+
+.quiz_b{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #c5c5c5;
+    border-bottom: 3px solid #888787dc;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.question {
+    margin-bottom: 15px;
+}
+
+.options li::after {
+    content: none !important;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    margin-bottom: 10px;
+}
+
+.options li button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.correct {
+    background-color: green; /* Verde para a resposta correta */
+    color: white;
+}
+
+.wrong {
+    background-color: red; /* Vermelho para a resposta errada */
+    color: white;
+}
+
+.quiz_b:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}

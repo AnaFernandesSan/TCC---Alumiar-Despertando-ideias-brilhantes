@@ -1,0 +1,159 @@
+/* Modal Background */
+
+body{
+    background-color: #f9f9f9;
+}
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo do modal */
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Permite que o conteúdo e o footer fiquem em coluna */
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Modal Body */
+.modal-body {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 20px; /* Espaço entre os elementos */
+}
+
+/* Container para a imagem e diálogo lado a lado */
+.image-dialog-container {
+    display: flex; /* Alinha a imagem e o diálogo lado a lado */
+    gap: 20px; /* Espaço entre a imagem e o diálogo */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+}
+
+/* Image Container */
+.image-container {
+    flex: 1; /* Faz a imagem ocupar espaço proporcional */
+    display: flex;
+    align-items: center; /* Alinha a imagem ao centro do contêiner */
+}
+
+.image-container img {
+    max-width: 150px; /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
+/* Dialogue Container */
+.dialogue-container {
+    flex: 1; /* Faz o diálogo ocupar espaço proporcional */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Remove margens adicionais para evitar deslocamento */
+    margin: 0;
+}
+
+.dialogue-container::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.dialogue-container p {
+    margin: 0;
+}
+
+/* Video Aula */
+.video-aula {
+    width: 100%; /* Ajusta a largura do vídeo */
+    margin-top: 20px; /* Espaço acima do vídeo */
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    text-align: center; /* Centraliza o texto do footer */
+    margin-top: 20px;
+}
+
+.modal-footer button {
+    margin: 5px;
+}
+
+/* Botão de acessar */
+.btn-acessar {
+    background-color: #FFD700; /* Amarelo ouro */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transição para cor e movimento */
+}
+
+.btn-acessar:hover {
+    background-color: #FFC107; /* Amarelo mais claro no hover */
+    transform: scale(1.05); /* Aumenta o botão um pouco ao passar o mouse */
+}
+.btn-acessar-modal {
+    background-color: #FFD700; /* Amarelo ouro */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transição para cor e movimento */
+}
+
+.btn-acessar-modal:hover {
+    background-color: #FFC107; /* Amarelo mais claro no hover */
+    transform: scale(1.05); /* Aumenta o botão um pouco ao passar o mouse */
+}
+
+
+
